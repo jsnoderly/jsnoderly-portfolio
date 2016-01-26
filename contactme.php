@@ -23,7 +23,7 @@
 
 	<section id="primary">
 		<h3>Contact Me</h3>
-		<p>I am currently interested in front-end coding projects.</p>
+		<p>I am currently interested in front-end coding projects and new opportunities.</p>
 	</section>
 
 	<section id="secondary">
