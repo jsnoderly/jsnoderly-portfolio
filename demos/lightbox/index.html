@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Litebox</title>
+
+<style>
+
+/* jbox - javascript only */
+
+.modal {
+
+    position: absolute;
+
+    z-index: 1000;
+
+}
+
+ 
+
+ 
+
+/* jqbox - jQuery */
+
+ 
+
+/* Background overlay with loading spinner gif */
+
+#overlay {
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    height:100%;
+
+    width:100%;
+
+    background: #999  no-repeat scroll center center;
+
+    z-index: -1;
+
+    text-align: center;
+
+}
+
+ 
+
+#container {
+
+    position: absolute;
+
+}
+
+ 
+
+.modal-close {
+
+    width: 30px;
+
+    padding: 5px;
+
+    border-radius: 5px;
+
+    font-size: 1.2em;
+
+}
+
+ 
+
+p {
+
+    margin: 50px;
+
+    padding: 20px;
+
+}
+
+</style>
+
+ 
+
+</head>
+
+<body>
+
+ 
+
+    <h2>PureJS lightbox</h2>
+
+    <!-- bring in overlay and container with image/content -->
+
+    <a href='desert.jpg' class='lightbox'>View</a>
+
+ 
+
+    <div id="lightbox-content" class="lightbox" style="display:none;">some content to test</div>
+
+ 
+
+    <div id="outerbox">
+
+        <div id="innerbox">
+
+            <img src="" alt="verizon">
+
+        </div>
+
+    </div>
+
+   
+
+    <p>"Doc would listen to any kind of nonsense and change it for you to a kind of wisdom. His mind had no horizon..."</p>
+
+    <p>"Everyone who knew him was indebted to him. And everyone who thought of him thought next, 'I really must do something nice for Doc.'"</p>
+
+    <p>"Doc would listen to any kind of nonsense and change it for you to a kind of wisdom. His mind had no horizon..."</p>
+
+    <p>"Everyone who knew him was indebted to him. And everyone who thought of him thought next, 'I really must do something nice for Doc.'"</p>
+
+    <p>"Doc would listen to any kind of nonsense and change it for you to a kind of wisdom. His mind had no horizon..."</p>
+
+    <p>"Everyone who knew him was indebted to him. And everyone who thought of him thought next, 'I really must do something nice for Doc.'"</p>
+
+ 
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script>
+
+ 
+
+    (function(){
+
+ 
+
+        // get DOM element references
+
+        var theLink = document.querySelector('.lightbox');
+
+ 
+
+        // capture click event
+
+        if(theLink.addEventListener) {
+
+            theLink.addEventListener('click', function(e) {
+
+                e.preventDefault();
+
+                jsBox.open();
+
+            }, false);
+
+        } else {
+
+            // IE8 event listener
+
+            theLink.attachEvent('onclick', function(e) {
+
+                jsBox.open();
+
+                return false;
+
+            });
+
+        }
+
+ 
+
+        // Declare jsBox Object
+
+        var jsBox = (function() {
+
+ 
+
+            // PRIVATE - unable to access from outside the object
+
+            var win = window;
+
+            var theBody = document.getElementsByTagName('body')[0];
+
+ 
+
+            // create overlay div
+
+            var modal = document.createElement('div');
+
+            modal.setAttribute('id','overlay');
+
+            theBody.appendChild(modal);
+
+ 
+
+            // create close button and add to modal
+
+            var closeBtn = document.createElement('button');
+
+            var closeBtnTxt = document.createTextNode('x');
+
+            closeBtn.appendChild(closeBtnTxt); 
+
+            closeBtn.setAttribute('role','button');
+
+            closeBtn.setAttribute('class','modal-close');
+
+ 
+
+            modal.appendChild(closeBtn);
+
+ 
+
+            // PUBLIC methods
+
+            return {
+
+ 
+
+                center: function() {
+
+                    // center modal
+
+                    console.log("center method");
+
+                    // Calc distance from top and left of window to center of modal
+
+                    console.log(win.innerHeight + " / " + win.innerWidth);
+
+                    var top = Math.max(win.innerHeight - modal.offsetHeight, 0) / 2;
+
+                    var left = Math.max(win.innerWidth - modal.offsetWidth, 0) / 2;
+
+                    // Set CSS for modal
+
+                    modal.setAttribute('top', top + win.scrollTop()); // Center vertically
+
+                    modal.setAttribute('left', left + win.scrollLeft()); // Center horizontally
+
+                },
+
+                open: function(settings) {
+
+                    // open
+
+                    console.log("open method");
+
+                    // remove scrollbars
+
+                    $('body').css('overflow-y', 'hidden');
+
+                    // call center() method
+
+                    jsBox.center();
+
+                    // ADD if window is resized function that calls center()...
+
+                },
+
+                close: function() {
+
+                    // close
+
+                    console.log("close method");
+
+                }
+
+ 
+
+            } // END: Return
+
+ 
+
+ 
+
+ 
+
+        }()); // END: jsbox object
+
+ 
+
+    })(); // END: IIFE
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+//-------------  JQUERY NINJA CODE EXAMPLE: -----------------------------------------------
+
+function nothing() {
+
+ 
+
+// Create DOM elements   
+
+$('<div id="overlay"></div>')
+
+  .css('top', $(document).scrollTop())
+
+  .css('opacity', '0')
+
+  .animate({'opacity': '0.5'}, 'slow')
+
+  .appendTo('body');
+
+ 
+
+$('<div id="lightbox"></div>')
+
+  .hide()
+
+  .appendTo('body');
+
+ 
+
+$('<img>')
+
+  .attr('src', $(this).attr('href'))
+
+  .load(function() {
+
+    positionLightboxImage();
+
+  })
+
+  .click(function() {
+
+    removeLightbox();
+
+  })
+
+  .appendTo('#lightbox');
+
+ 
+
+}
+
+ 
+
+function positionLightboxImage() {
+
+  var top = ($(window).height() - $('#lightbox').height()) / 2;
+
+  var left = ($(window).width() - $('#lightbox').width()) / 2;
+
+  $('#lightbox')
+
+    .css({
+
+      'top': top + $(document).scrollTop(),
+
+      'left': left
+
+    })
+
+    .fadeIn();
+
+}
+
+ 
+
+ 
+
+function removeLightbox() {
+
+  $('#overlay, #lightbox')
+
+    .fadeOut('slow', function() {
+
+      $(this).remove();
+
+      $('body').css('overflow-y', 'auto'); // show scrollbars!
+
+    });
+
+}
+
+ 
+
+</script>
+
+ 
+
+</body>
+
+</html>

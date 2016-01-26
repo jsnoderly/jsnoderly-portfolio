@@ -1,0 +1,79 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="cache-control" content="no-cache" />
+        <title>Google Maps Demo</title>
+
+        <link rel="stylesheet" href="css/interface.css">
+    </head>
+<body>
+
+	<div class="row">
+		<div class="large-12 columns" id="header">
+			<h1>Google Maps Demo</h1>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<!-- Details and resources -->
+		<div class="large-12 columns">
+			<h4>Google Maps JavaScript API v3</h4>
+			<div class="subheader"><a href="https://developers.google.com/maps/documentation/javascript/tutorial">Getting Started</a></div>
+            <div class="subheader"><a href="https://developers.google.com/maps/documentation/javascript/usage#usage_limits">Usage Limits & Billing</a>
+        </div>
+
+		<!-- the Map -->
+		<div class="row">
+            <div class="large-3 columns">
+                Map Demo
+            </div>
+            <div class="large-9 columns">
+                <div id="map-canvas"></div>
+            </div>
+		</div>
+
+    </div>
+
+
+<script>
+
+// my Address: 37.914206,-122.055928
+
+/*
+Configurable Features:
+	- API (key used in URL)
+	- div ID (e.g. #mapCanvas
+	- Latitude
+	- Longitude
+	- Zoom
+	- Map type (Roadmap, satellite, Terrain, etc.)
+	- 
+
+*/
+
+	function initialize() {
+	  var mapOptions = {
+		zoom: 18,
+		center: new google.maps.LatLng(37.914, -122.055),
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	  }
+	  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+	}
+	
+	function loadScript() {
+	  var script = document.createElement("script");
+	  script.type = "text/javascript";
+	  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyAQoWkZ7IYRBCTEeqL4-a-ZtJpB4eVzLfY&sensor=false&callback=initialize";
+	  document.body.appendChild(script);
+	}
+	
+	window.onload = loadScript;
+
+</script>
+
+</body>
+</html>

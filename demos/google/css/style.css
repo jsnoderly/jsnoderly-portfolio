@@ -1,0 +1,100 @@
+/* JS - Base Stylesheet */
+/* Normalize.css performs reset */
+
+/*
+	@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+*/
+
+/* Google fonts - PT Sans*/
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/0XxGQsSc1g4rdRdjJKZrNL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Sans Italic'), local('PTSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v4/PIPMHY90P7jtyjpXuZ2cLLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+
+/* BASE */
+
+body {
+	color: #333;
+	background: #ededed;
+
+	font-family: 'PT Sans', sans-serif;
+}
+
+.SectionTitle {
+	color: #BB3227;
+    font-size: 23px;
+    padding: 0 0 20px;
+}
+
+/* 
+	text-shadow: 0 0 1px #bb3227; 
+	OR
+	text-shadow: 0 0 1px rgba(187, 50, 39, 0.2); 
+
+	text-shadow usage: (see: http://css-tricks.com/snippets/css/css-text-shadow/)
+	rgba value allows for transparency
+	1. value = The X-coordinate
+	2. value = The Y-coordinate
+	3. value = The blur radius
+	4. value = The color of the shadow
+
+*/
+
+/* LAYOUT */
+
+header {
+	width: 80%;
+	height: 10%;
+	margin: 0 auto;
+	background: #666;
+}
+
+section {
+	width: 80%;
+	margin: 0 auto;
+	padding: 10px;
+	background: blue;
+}
+
+.content {
+	margin:0;
+	padding: 0;
+	width: 70%;
+	min-height: 400px;
+	background: #ccc;
+	float: left;
+}
+
+.module {
+	margin:0;
+	padding: 0;
+	width: 30%;
+	min-height: 400px;
+	background: #999;
+	float: right;
+}
+
+footer {
+	clear: both;
+	width: 80%;
+	height: 10%;
+	margin: 0 auto;
+	background: #666;
+}
+

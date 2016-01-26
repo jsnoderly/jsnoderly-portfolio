@@ -1,0 +1,18 @@
+
+body {
+	background-color: rgb(107,172,191);
+	color: #0b0b0b;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+/* Navigation */
+.nav-menu {
+	list-style-type: none;
+}
+
+.nav-item {
+	display: inline-block;
+}
+
+

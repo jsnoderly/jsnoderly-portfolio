@@ -1,0 +1,238 @@
+
+body {
+  font-family: Arial, sans-serif;
+  color: #aaaeb2;
+  background: #f1f1f1 url(images/bg.jpg);
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+form {
+  margin: 20px;
+}
+
+.block  {
+  margin: 30px 0;
+  display: block;
+  position: relative;
+  width: 300px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background: #fff;
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+}
+
+.product {
+  display: block;
+  position: relative;
+}
+
+.product img {
+  width: 100%;
+  border-top-left-radius: 5px; /* add vendor prefixes */
+  border-top-right-radius: 5px;
+}
+
+.info {
+  display: block;
+  position: relative;
+  padding: 20px;
+}
+
+.details {
+  border-top: 1px solid #e5e5e5;
+  padding: 18px 20px;
+}
+
+/* Buttons */
+.buttons a {
+  display: block;
+  position: abolute;
+  left: 50px;
+  width: 250px;
+  border-radius: 2px; /* add vendor prefixes */
+  padding: 18px 10px 15px 65px;
+  font-family: Helvetica, sans-serif; /* know SHORTHAND and sequence of it... */
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase; /* MEMORIZE */
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  opacity: 1; /* IE8 No support. Uses a filter which is not good. */
+}
+
+.buttons a::after {
+  content:"";
+  display:block;
+  position: absolute;
+  height: 48px;
+  width: 50px;
+  border-right: 1px solid rgba(0,0,0,.25);
+  box-shadow: 1px 0 0 rgba(255, 255, 255, .17); /* add vendor prefix */
+  top:0;
+  left:0;
+  z-index: 1;
+}
+
+/* Add to cart - button */
+a.buy {
+  top: 20%;
+  background: #414141;
+  background: rgba(0, 0, 0, .85);
+  transition: background .2s ease-in; /* MEMORIZE */
+}
+
+.buy:hover {
+  background: #515151;
+  background: rgba(45, 45, 45, .85);
+}
+
+.buy::after {
+  background: url("../images/shopping-cart.png");
+  background-repeat: no-repeat;
+  background-position: 16px 18px;
+}
+
+/* View item - button */
+a.preview {
+  bottom: 20%;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, .4);
+  background: #286398;
+  background: -moz-linear-gradient(bottom, #1d4970, #639ed3); /* Gradient (linear) - MEMORIZE */
+  background-position: 0 -15px;
+  background-size: 400px 80px; /* what is this?? */
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 0 #165181; /* memorize */
+  transition: background-position .2s ease-in;
+}
+
+.preview:hover, .buy-now:hover {
+  background-position: 0 0;
+}
+
+.preview:active, .buy-now:active {
+  transform: translateY(2px);
+  box-shadow: none; /* add vendor prefixes */
+}
+
+.preview::before {
+  content: "\f07a"; /* using unicode for shopping cart */
+  font-family: FontAwesome;
+  color: white;
+  /*background: url("../images/eye-icon.png");
+  background-repeat: no-repeat;
+  background-position: 16px 17px;*/
+}
+
+/* Information arrow */
+.info::after {
+  display: block; /* NECESSARY ???? */
+  position: absolute;
+  top: -12px;
+  left: 23px;
+  content: "";
+  height: 25px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.info h4 {
+  position: relative;
+  margin: 10px 0;
+  padding: 10px 0;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+/* Bottom border added to h4 */
+.info h4::after {
+  display: block; /* this makes the pseudo element take up a new line */
+  position: absolute;
+  bottom: 0px;
+  content: "";
+  width: 100%; /* border width */
+  height: 2px; /* border thickness */
+  background: #3b86c4;
+}
+
+.info .description {
+  display: block;
+  padding-bottom: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5f5f5f;
+}
+
+/* price */
+.info .price {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #5f5f5f;
+}
+
+/* Buy Now button */
+.buy-now {
+  float: right;
+  position: relative; /* necessary when using positioning ??? */
+  top: -5px;
+  display: block;
+  padding: 10px 10px;
+  border-radius: 3px;
+  
+  font-family: "Helvetica-Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, .4);
+
+  background: #286398;
+  background: -webkit-linear-gradient(bottom, #1d4970, #639ed3); /* vendor prefixes... MEMORIZE */
+  background: -moz-linear-gradient(bottom, #1d4970, #639ed3);
+  background-position: 0 -15px;
+  background-size: 400px 80px; /* What is this ???? */
+  background-repeat: no-repeat;
+  transition: background-position .2s ease-in;
+
+  box-shadow: 0 2px 0 #165181;
+}
+
+/* Rating section */
+.rating {
+  position: relative; /* Needed to use positioning, e.g. top, left */
+  top: 2px;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+.rating li {
+  float: left;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin-left: 5px;
+  background: url("images/star.png") no-repeat 0 0;
+}
+
+.rating li.rated {
+  background-position: 0px -16px;
+}
+
+
+
+
+

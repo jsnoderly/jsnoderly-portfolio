@@ -1,0 +1,259 @@
+
+/*
+	Color Scheme:
+	blue 		#3aa0ba
+	dk blue		#2f8499
+	red  		#C52215
+	dk red		#901707
+	tan  		#ece5c7
+	dk tan		#e2d3b6
+	text color: #333333
+
+LESS VARS:
+------------------------
+heading colors
+link colors
+fonts
+font sizes - h1, h2...
+
+*/
+
+/******************************** 
+	BASE
+********************************/
+
+body {
+	font: 12px 'Lato', sans-serif;
+	background-color: #ece5c7;
+	background-image: url("../img/bg.jpg");
+	color: #333;
+}
+
+a {
+	color: #3aa0ba;
+	text-decoration:none;
+}
+
+img {
+	max-width: 100%;
+}
+
+h3 {
+	margin: 0.5em 0 0 1.0em;
+}
+
+/******************************** 
+	TYPOGRAPHY
+********************************/
+h1, h2 {
+	color: #333;
+}
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	margin: 15px 0;
+	font-size: 1.2em;
+	font-weight: normal;
+}
+
+h2 {
+	font-family: 'Lato', sans-serif;
+	margin: 10px 0;
+	font-size: 1.0em;
+	font-weight: normal;
+}
+
+h3 {
+
+}
+
+/******************************** 
+	COLORS
+********************************/
+
+header {
+	border-color: #333;
+}
+
+nav a, nav a:visited {
+	color: #333;
+}
+
+nav a.selected, nav a:hover {
+	color: #ff6600;
+}
+
+
+
+/******************************** 
+	LAYOUT
+********************************/
+
+#wrapper {
+	margin: 0 auto;	
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+
+header {
+	float: none;
+	margin: 0 0 30px 0;
+	padding: 5px 0 0 0;
+	width: 100%;
+}
+
+#logo {
+	text-align: center;
+	margin:0;
+}
+
+#logo img {
+	max-width: 120px;
+}
+
+#gallery {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#gallery li {
+	float: left;
+	width: 45%;
+	margin: 2.5%;
+	background-color: #f5f5f5;
+	color: #bdc3c7;
+}
+
+#gallery li a p {
+	margin: 0 0 0 8px;
+	padding: 5px;
+	font-size: 1.1em;
+	color: #bdc3c7;
+}
+
+
+/*     PAGE: About     */
+.profile-photo {
+	display: block; /* images by default display inline. but we want it display: block and have width/height */
+	max-width: 150px;
+	margin: 0 auto 30px;
+	border-radius: 100%;
+}
+
+
+/*     PAGE: Contact     */
+.contact-info {
+	list-style: none;
+	padding:0;
+	margin:0;
+	font-size: 0.9em;
+}
+
+.contact-info a {
+	display: block;
+	min-height: 20px;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	padding: 0 0 0 30px;
+	margin: 0 0 10px;
+}
+
+.contact-info li.phone a {
+	background-image: url('../img/phone-icon.png');
+}
+
+.contact-info li.mail a {
+	background-image: url('../img/mail-icon.png');
+}
+
+.contact-info li.twitter a {
+	background-image: url('../img/twitter-icon.png');
+}
+
+
+/******************************** 
+	NAVIGATION
+********************************/
+nav {
+	text-align: center;
+	padding: 10px 0;
+	margin: 20px 0 0;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+nav a {
+	font-weight: 800;
+	padding: 15px 10px;
+	text-decoration: none;
+	-webkit-transition: color 0.25s ease;
+	transition: color 0.25s ease;
+}
+
+nav {
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+/******************************** 
+	FOOTER
+********************************/
+footer {
+	font-size: 0.75em;
+	text-align: center;
+	clear: both;
+	padding-top:  50px;
+	color: #666666;
+}
+
+.social-icon {
+	width: 25px;
+	height: 25px;
+	margin: 0 5px;
+	opacity: 0.5;
+}
+
+.social-icon:hover {
+	opacity: 1.0;
+}
+
+/******************************** 	
+	MODULE
+********************************/
+
+#social-media a {
+	float: left;
+	width: 25px;
+	height: 24px;
+	margin-right: 8px;
+}
+
+/* Sprite example */
+#main-nav-wrapper.container nav > a {
+	display: inline-block;
+	background-image: url('../img/sprites/global.png');
+	background-position: 0 -1828px;
+	background-repeat: no-repeat;
+	height: 28px;
+	width: 28px;
+}
+
+/******************************** 	
+	UTILS
+********************************/
+
+.text-center {
+	text-align: center;
+}
+

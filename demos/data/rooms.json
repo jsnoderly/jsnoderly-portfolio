@@ -1,0 +1,32 @@
+[
+  {
+   "room": 101,
+   "available": false,
+   "url": "http://www.google.com"
+  },
+  {
+   "room": 102,
+   "available": true,
+   "url": "http://www.google.com"
+  },
+  {
+   "room": 103,
+   "available": false,
+   "url": "http://www.google.com"
+  },
+  {
+   "room": 104,
+   "available": false,
+   "url": "http://www.google.com"
+  },
+  {
+   "room": 105,
+   "available": true,
+   "url": "http://www.google.com"
+  },
+  {
+   "room": 106,
+   "available": true,
+   "url": "http://www.google.com"
+  }
+]

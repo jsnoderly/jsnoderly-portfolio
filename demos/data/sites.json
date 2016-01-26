@@ -1,0 +1,104 @@
+{
+  "searchResult": [
+    {
+      "propertyName": "1204 Harbourside Drive, New Bern",
+      "status": null,
+      "url": "www.realpage.com",
+      "companyName": "TJS Properties Inc.",
+      "propertyId": 1773036,
+      "companyId": 10643,
+      "templateId": 1989,
+      "isContentComplete": true
+    },
+    {
+      "propertyName": "12353 Albano Road, Barboursville",
+      "status": "success",
+      "url": null,
+      "companyName": "Nest Property Management",
+      "propertyId": 1329476,
+      "companyId": 28289,
+      "templateId": null,
+      "isContentComplete": false
+    },
+    {
+      "propertyName": "$1700 2 bedroom in 1 Harbourside Drive",
+      "status": null,
+      "url": "www.apple.com",
+      "companyName": "Other",
+      "propertyId": 1656270,
+      "companyId": 34246,
+      "templateId": null,
+      "isContentComplete": false
+    },
+    {
+      "propertyName": "$1800 2 bedroom in 1 Harbourside Drive",
+      "status": "success",
+      "url": null,
+      "companyName": "Other",
+      "propertyId": 1659866,
+      "companyId": 34246,
+      "templateId": null,
+      "isContentComplete": false
+    },
+    {
+      "propertyName": "$1950 Three bedroom in Barboursville-Omega Ct",
+      "status": null,
+      "url": "www.realpage.com",
+      "companyName": "Other",
+      "propertyId": 1408146,
+      "companyId": 5560,
+      "templateId": null,
+      "isContentComplete": false
+    },
+    {
+      "propertyName": "1bd The Arbours Of Hermitage In Hermitage, Tn Offe ...",
+      "status": null,
+      "url": null,
+      "companyName": "Other",
+      "propertyId": 565951,
+      "companyId": 8624,
+      "templateId": null,
+      "isContentComplete": false
+    },
+    {
+      "propertyName": "2bd The Arbours Of Hermitage In Hermitage, Tn Offe ...",
+      "status": null,
+      "url": null,
+      "companyName": "Other",
+      "propertyId": 565950,
+      "companyId": 8624,
+      "templateId": null,
+      "isContentComplete": false
+    },
+    {
+      "propertyName": "3bd The Arbours Of Hermitage In Hermitage, Tn Offe ...",
+      "status": null,
+      "url": null,
+      "companyName": "Blue Star Hills",
+      "propertyId": 565952,
+      "companyId": 8624,
+      "templateId": null,
+      "isContentComplete": false
+    },
+    {
+      "propertyName": "Arbours at Ensley",
+      "status": null,
+      "url": null,
+      "companyName": "Other",
+      "propertyId": 855774,
+      "companyId": 8640,
+      "templateId": null,
+      "isContentComplete": false
+    },
+    {
+      "propertyName": "Arbours at Fort King",
+      "status": null,
+      "url": null,
+      "companyName": "Other",
+      "propertyId": 858727,
+      "companyId": 8640,
+      "templateId": null,
+      "isContentComplete": false
+    }
+  ]
+}

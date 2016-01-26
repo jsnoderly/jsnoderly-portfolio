@@ -1,0 +1,78 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Let's Count</title>
+
+		<style>
+		.highlight {
+			padding: 5px;
+			background-color: #ccc;
+		}
+		.inputField {
+			padding: 5px;
+			border-radius: 2px;
+			width: 300px;
+		}
+		#header img {
+			width: 25%;
+			height: 25%;
+			border-radius: 10px;	
+		}
+		.button {
+			padding: 4px;
+			border: 2px solid purple;
+			border-radius: 4px;
+			background-color: purple;
+			color: #fff;
+		}
+		</style>
+    </head>
+    <body onload="document.countForm.elements[0].focus();">
+
+	<!-- 
+		- use Foundation for layout or Kite?
+		- match my drawing layout
+		
+		- Have the characters counted as they are typed into the fields and show the diff...
+	-->
+
+	<div>
+
+	<div id="header">
+		<img src="thecount.jpg" />
+		<h1>Let's Count</h1>
+	</div>
+
+	<form name="countForm">
+		First word(s) to be counted: <input type="text" id="charsToCount" value="" class="inputField">
+		<br/>
+		Second word(s) to be counted: <input type="text" id="charsToCount2" value="" class="inputField">
+	</form>
+
+	<p>
+	<a href="#" onClick="countThem();" class="button">Count'em</a>
+	</p>
+
+    <script>
+	function countThem() {
+
+		// chars to count
+		var charsToCount = document.getElementById("charsToCount").value;
+		var charsToCount2 = document.getElementById("charsToCount2").value;
+
+		// name length, minus spaces or special chars
+		var length1 = charsToCount.length;
+		var length2 = charsToCount2.length;
+		var diff = length1 - length2;
+		document.write("<p><span class='highlight'>" + charsToCount + "</span> is <strong>" + length1 + "</strong> characters long</p>");
+		document.write("<p><span class='highlight'>" + charsToCount2 + "</span> is <strong>" + length2 + "</strong> characters long</p>");
+		document.write("<p>the difference is: <strong>" + diff + "</strong></p>");
+		document.write("<a href='index.html'>Let's count again >></a>");
+
+	}
+	</script>
+	
+	</body>
+	</html>

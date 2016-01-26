@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AJAX Flickr Photo Feeder</title>
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/flickr.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+  <script src="js/flickr.js"></script>
+
+</head>
+<body>
+
+  <div class="grid-container centered">
+    <div class="grid-100">
+      <div class="contained">
+        <div class="grid-100">
+
+          <div class="heading">
+            <h1>Flickr Photo Feed</h1>
+            <h2>Temperature in: <span id="temperature"></span> <span class="small">from OpenWeather API</span></h2>
+            <p>Choose a category to view photos</p>
+          </div>
+
+          <ul class="filter-select">
+            <li><button value="barbara">Barbara</button></li>
+            <li><button value="aidan">Aidan</button></li>
+            <li><button value="keelyn">Keelyn</button></li>
+          </ul>
+
+        </div>
+
+        <!-- Display Photos here -->
+        <div id="photos"></div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

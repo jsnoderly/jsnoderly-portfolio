@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<title>Keelyn Game Demo</title>
+	<style>
+	body {
+		font-family: arial, sans-serif;
+		margin: 0 auto;
+		text-align: center;
+		background: #F0EAD6;
+	}
+
+	h1 {
+		color: pink;
+		background-color: #999999;
+		margin: 0;
+		margin-bottom: 80px;
+		padding: 30px;
+		text-align: center;
+		letter-spacing: 0.2em;
+	}
+
+	p {
+		margin-top: 20px;
+		font-size: 12px;
+		text-align: center;
+	}
+	
+	#game-box {
+		margin: 0 auto;
+		width: 640px;
+		height: 384px;
+		border: 8px solid #999;
+		position: relative;
+	}
+		
+	#overlay {
+		position: absolute;
+		top: 112px;
+		left: 253px;
+		background: #ccc;
+		padding: 20px;
+		border-radius: 5px;
+		-webkit-box-shadow: 7px 11px 11px 0px rgba(0,0,0,0.65);
+		-moz-box-shadow: 7px 11px 11px 0px rgba(0,0,0,0.65);
+		box-shadow: 7px 11px 11px 0px rgba(0,0,0,0.65);
+	}
+	</style>
+</head>
+<body>
+
+	<h1>Mambo</h1>
+
+	<div id="game-box">
+
+		<object type="application/x-shockwave-flash" data="gamethree.swf" width="640" height="384">
+	  		<param name="movie" value="gamethree.swf" />
+	  		<param name="quality" value="high"/>
+		</object>
+		
+		<div id="overlay">Click on game screen to START. Good luck!</div>
+
+	</div>
+	
+	<p>By Keelyn</p>
+
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script>
+	$("body").click(function() {
+		$("#overlay").hide();
+	});
+	</script>
+
+</body>
+</html>

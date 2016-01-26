@@ -1,0 +1,210 @@
+
+<!--
+AppName: Get Fit
+	- instructions for workout
+	- Show first exercise (start with text only, e.g. Bench Press)
+	- move to next exercise manually (add timed move later...)
+	- Provide alternative exercise when machine is being used...	
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>getFIT App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,300,500,700,300italic,500italic,700italic,400italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+  </head>
+  <body>
+
+<div class="outer-border">
+  <header>
+    <h1>getFIT</h1>
+  </header>
+</div>
+
+    <div class="container">
+
+      <!-- <p>
+        <label for="new-task">Add Item</label>
+        <input id="new-task" type="text" placeholder="enter task..."><button>Add</button>
+      </p> -->
+      
+      <h2>WORKOUT: Shoulders</h2>
+      <h4>Middle Delt</h4>
+
+      <ul id="incomplete-tasks">
+        <li>
+          <input type="checkbox">
+          <label>EXERCISE 1</label>
+          <h3 class="exercise-name">Seated Dumbbell Shoulder Press</h3>
+          <span class="exercise-equipment">You'll need: Dumbbells, Bench</span>
+          <span class="exercise-how-to">How to</span>
+			<img src="img/exercises/shoulders/seated-dumbbell-shoulder-press-1.jpg">
+			<img src="img/exercises/shoulders/seated-dumbbell-shoulder-press-2.jpg">
+
+			<div class="exercise-instructions">
+				<div class="exercise-instructions-item">
+					3
+					<span class="exercise-instructions-label">sets</span>
+				</div>
+				<div class="exercise-instructions-item">
+					15, 10, 6
+					<span class="exercise-instructions-label">reps</span>
+				</div>
+				<div class="exercise-instructions-item">
+					30
+					<span class="exercise-instructions-label">secs</span>
+				</div>
+			</div>
+        </li>
+
+        <li>
+          <input type="checkbox">
+          <label>EXERCISE 2</label>
+          <h3 class="exercise-name">Smith Machine Overhead Press</h3>
+          <span class="exercise-equipment">You'll need: Smith Machine, Bench</span>
+          <span class="exercise-how-to">How to</span>
+			<img src="img/exercises/shoulders/smith-machine-overhead-press-1.jpg">
+			<img src="img/exercises/shoulders/smith-machine-overhead-press-2.jpg">
+
+			<div class="exercise-instructions">
+				<div class="exercise-instructions-item">
+					3
+					<span class="exercise-instructions-label">sets</span>
+				</div>
+				<div class="exercise-instructions-item">
+					10
+					<span class="exercise-instructions-label">reps</span>
+				</div>
+				<div class="exercise-instructions-item">
+					30
+					<span class="exercise-instructions-label">secs</span>
+				</div>
+			</div>
+        </li>
+
+        <li>
+          <input type="checkbox">
+          <label>EXERCISE 3</label>
+          <h3 class="exercise-name">Dumbbell Lateral Raise</h3>
+          <span class="exercise-equipment">You'll need: Dumbbells</span>
+          <span class="exercise-how-to">How to</span>
+			<img src="img/exercises/shoulders/dumbbell-lat-raise-1.jpg">
+			<img src="img/exercises/shoulders/dumbbell-lat-raise-2.jpg">
+
+			<div class="exercise-instructions">
+				<div class="exercise-instructions-item">
+					3
+					<span class="exercise-instructions-label">sets</span>
+				</div>
+				<div class="exercise-instructions-item">
+					8
+					<span class="exercise-instructions-label">reps</span>
+				</div>
+				<div class="exercise-instructions-item">
+					30
+					<span class="exercise-instructions-label">secs</span>
+				</div>
+			</div>
+        </li>
+
+        <li>
+          <input type="checkbox">
+          <label>EXERCISE 4</label>
+          <h3 class="exercise-name">Machine Lateral Raise</h3>
+          <span class="exercise-equipment">You'll need: Dumbbells</span>
+          <span class="exercise-how-to">How to</span>
+			<img src="img/exercises/machine-lat-raise.jpg">
+
+			<div class="exercise-instructions">
+				<div class="exercise-instructions-item">
+					3
+					<span class="exercise-instructions-label">sets</span>
+				</div>
+				<div class="exercise-instructions-item">
+					10/8
+					<span class="exercise-instructions-label">reps</span>
+				</div>
+				<div class="exercise-instructions-item">
+					30
+					<span class="exercise-instructions-label">secs</span>
+				</div>
+			</div>
+        </li>
+
+        <li>
+          <input type="checkbox">
+          <label>EXERCISE 5</label>
+          <h3 class="exercise-name">Bent-Over Cable Lateral Raise</h3>
+          <span class="exercise-equipment">You'll need: Dumbbells</span>
+          <div class="exercise-how-to">How to</div>
+          <div>
+			<img src="img/exercises/shoulders/bentover-cable-lat-raise-1.jpg" class="float-left">
+			<img src="img/exercises/shoulders/bentover-cable-lat-raise-2.jpg" class="float-right">
+		</div>
+
+			<div class="exercise-instructions">
+				<div class="exercise-instructions-item">
+					2
+					<span class="exercise-instructions-label">sets</span>
+				</div>
+				<div class="exercise-instructions-item">
+					10
+					<span class="exercise-instructions-label">reps</span>
+				</div>
+				<div class="exercise-instructions-item">
+					30
+					<span class="exercise-instructions-label">secs</span>
+				</div>
+			</div>
+        </li>
+
+	<li>
+          <input type="checkbox">
+          <label>EXERCISE 6</label>
+          <h3 class="exercise-name">Front Raise</h3>
+          <span class="exercise-equipment">You'll need: Dumbbells</span>
+          <span class="exercise-how-to"><a href="#" id="exercise-3">How to</a></span>
+			<img src="img/exercises/shoulders/front-raise-1.jpg">
+			<img src="img/exercises/shoulders/front-raise-2.jpg">
+
+			<div class="exercise-instructions">
+				<div class="exercise-instructions-item">
+					3
+					<span class="exercise-instructions-label">sets</span>
+				</div>
+				<div class="exercise-instructions-item">
+					8
+					<span class="exercise-instructions-label">reps</span>
+				</div>
+				<div class="exercise-instructions-item">
+					30
+					<span class="exercise-instructions-label">secs</span>
+				</div>
+			</div>
+        </li>
+
+
+<!--         <li>
+          <input type="checkbox">
+          <label>Go Shopping</label>
+          <input type="text" value="Go Shopping">
+          <button class="edit">Edit</button>
+          <button class="delete">Delete</button>
+        </li> -->
+      </ul>
+      
+      <h3>Completed</h3>
+      <ul id="completed-tasks">
+        <li><input type="checkbox" checked><label>Warm up</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+      </ul>
+    </div>  
+
+    <script type="text/javascript" src="js/app.js"></script>
+
+  </body>
+</html>

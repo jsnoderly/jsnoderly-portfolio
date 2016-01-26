@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html ng-app> <!-- Angular Directive = init -->
+<head>
+	<title>Angular demo</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!--+++++++++++++++  DRAG AND DROP  +++++++++++++++-->
+
+<style>
+#user-levels {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#admins, #editors, #contributors, #unassigned {
+	float: left;
+	width: 200px;
+	height: 200px;
+	padding: 5px 0;
+	margin-right: 3px;
+	background: #eee;
+	text-align: center;
+}
+
+#contributors {
+	background: url('img/gryffindor.png') center center no-repeat;
+	background-size: 100px 100px;
+}
+
+#editors {
+	background: url('img/slytherin.png') center center no-repeat;
+	background-size: 100px 100px;
+}
+
+#admins {
+	background: url('img/ravenclaw.png') center center no-repeat;
+	background-size: 100px 100px;
+}
+
+#admins, #editors, #contributors {
+	background-color: #ff6600;
+}
+
+#barb-message {
+	float: left;
+	width: 200px;
+	height: 200px;
+	padding: 5px 0;
+	margin-right: 3px;
+	background: #eee;
+	text-align: center;
+	background-color: orange;
+	color: white;
+	font: 20px bold serif;
+}
+
+#barb-message img { 
+	max-width: 170px;
+}
+
+.user {
+	width: 100px;
+	display: block;
+	border: 1px solid #333;
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px;
+	background-color: dodgerblue;
+	margin: 3px auto;
+	padding: 3px 15px;
+	clear:left:;
+
+	font: 13px normal arial,sans-serif;
+}
+
+hr {
+	border:0;
+	height:1px;
+	background: #ccc;
+}
+
+/* app requirements */
+.reqs {
+	background-color: #
+}
+
+.clear {
+	clear: both;
+}
+</style>
+
+
+<section id="user-levels">
+
+<h1>HOGWARTS Sorting Hat</h1>
+
+	<div id="unassigned" ondrop="dropUser(this,event)" ondragenter="return false" ondragover="return false">
+		New Hogwarts Students
+		<hr>
+		<a draggable="true" id="hermoine" class="user" ondragstart="dragUser(this,event)">Hermoine</a>
+		<a draggable="true" id="ron" class="user" ondragstart="dragUser(this,event)">Ron</a>
+		<a draggable="true" id="beans" class="user" ondragstart="dragUser(this,event)">Beans</a>
+		<a draggable="true" id="barb" class="user" ondragstart="dragUser(this,event)">BARB</a>
+		<a draggable="true" id="malfoy" class="user" ondragstart="dragUser(this,event)">Malfoy</a>
+		<a draggable="true" id="harry" class="user" ondragstart="dragUser(this,event)">Harry</a>
+	</div>
+
+	<div id="contributors" ondrop="dropUser(this,event)" ondragover="return false">
+	Gryffindor		
+	<hr>
+	</div>
+
+	<div id="editors" ondrop="dropUser(this,event)" ondragenter="return false" ondragover="return false">
+	Slytherin
+	<hr>
+	</div>
+
+	<div id="admins" ondrop="dropUser(this,event)" ondragenter="return false" ondragover="return false">
+	Ravenclaw
+	<hr>
+	</div>
+	<div class="clear"></div>
+
+</section>
+
+<h4>Requirements</h4>
+<ol class="reqs">
+	<li>Add sorting to drop names onto</li>
+	<li>add users to houses</li>
+	<li>pop up students cheering with html5 audio</li>
+	<li>boxes for each house will have drop shadow when dragging over it</li>
+	<li>use show/hide for Barb surprise, instead of replaceWith code</li>
+	<li> Create JSON file with users names</li>
+	<li> validate JSON using jsonlint</li>
+	<li> access JSON file data using AJAX - XMLHttpRequest object</li>
+	<li> populate draggable links with users names </li>
+	<li> Create interface to add names to JSON file? (use Javascript? or need PHP...)</li>
+</ol>
+
+<script>
+
+function dropUser(target, event) {
+	var user = event.dataTransfer.getData('User');
+	target.appendChild(document.getElementById(user));	
+
+	// Barb surprise
+	if (user == "barb") {
+		$("#contributors").replaceWith("<div id='barb-message'><p>I LOVE YOU!</p><img src='img/heart.gif'/></div>").slideUp(1000);
+	}
+	// Beans surprise
+	if (user == "beans") {
+		$("#contributors").replaceWith("<div id='barb-message'><p>Fart baby!</p><img src='img/fart.jpg'/></div>").fadeIn(300);
+	}
+}
+
+function dragUser(user, event) {
+	event.dataTransfer.setData('User', user.id);
+}
+
+</script>
+
+<!--+++++++++++++++  DRAG AND DROP  +++++++++++++++-->
+
+
+<h4>AngularJS demo</h4>
+
+<p>
+	Directives - A directive is really a way to teach HTML new tricks. Angular takes it up a whole notch and allows us to extend HTML very easily by simply adding attributes, elements or comments
+</p>
+
+
+First Name:<br />
+<input type="text" ng-model="name" /> {{ name }}
+
+
+<!-- LOAD UP JS -->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/angular.js"></script>
+
+</body>
+</html>
